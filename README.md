@@ -21,13 +21,12 @@ Kullanıcıların PDF, PNG veya JPG gibi dosyaları yükleyip listeleyebildiği 
 
 ## 🧪 API Uç Noktaları
 
-| Yöntem | Uç Nokta        | Açıklama                  |
+| Yöntem | Uç Nokta         | Açıklama                  |
 |--------|------------------|---------------------------|
 | POST   | /register        | Kullanıcı kayıt olur      |
 | POST   | /login           | Giriş yapar, token alır   |
-| POST   | /upload          | Dosya yükler              |
-| GET    | /files           | Tüm dosyaları listeler    |
-| DELETE | /files/:filename | Dosya siler               |
+| GET    | /dashboard       | Tüm dosyaları listeler    |
+
 
 ## 🖥️ Ekran Görüntüleri
 
