@@ -1,0 +1,14 @@
+{
+  "name": "dosya-yukleme",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "frontend": "cd ./frontend/ && npm run dev",
+    "backend":"cd ./backend/ && npm run start",
+    "project":"npm run backend | npm run frontend"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

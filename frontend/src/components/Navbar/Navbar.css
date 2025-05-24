@@ -1,0 +1,242 @@
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  padding: 1.5rem 0;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+}
+
+.navbar-scrolled {
+  background: var(--bg-light);
+  backdrop-filter: blur(10px);
+  padding: 0.75rem 0;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-light);
+  transition: var(--transition);
+}
+
+.navbar-scrolled .navbar-brand {
+  color: var(--text-dark);
+}
+
+.navbar-brand-icon {
+  margin-right: 0.75rem;
+  font-size: 1.5rem;
+}
+
+.navbar-brand-text {
+  background: linear-gradient(135deg, #a5b4fc, #c4b5fd);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+}
+
+
+.navbar-user {
+  position: relative;
+}
+
+.navbar-user-button {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: var(--transition);
+}
+
+.navbar-user-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-scrolled .navbar-user-button:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.navbar-user-avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.75rem;
+}
+
+.navbar-user-icon {
+  font-size: 1.25rem;
+  color: var(--text-light);
+}
+
+.navbar-scrolled .navbar-user-icon {
+  color: var(--primary-color);
+}
+
+.navbar-user-email {
+  font-weight: 500;
+  margin-right: 0.5rem;
+  color: var(--text-light);
+}
+
+.navbar-scrolled .navbar-user-email {
+  color: var(--text-dark);
+}
+
+.navbar-dropdown-icon {
+  transition: var(--transition);
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+
+.navbar-dropdown {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  margin-top: 0.5rem;
+  width: 16rem;
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  z-index: 1001;
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-header {
+  padding: 1rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.dropdown-status {
+  font-size: 0.75rem;
+  color: #64748b;
+  margin-bottom: 0.25rem;
+}
+
+.dropdown-email {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dropdown-menu {
+  padding: 0.5rem 0;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  color: var(--text-dark);
+  font-size: 0.875rem;
+  transition: var(--transition);
+}
+
+.dropdown-item:hover {
+  background: #f8fafc;
+}
+
+.dropdown-item-icon {
+  margin-right: 1rem;
+  color: #64748b;
+}
+
+.dropdown-item.logout {
+  color: #ef4444;
+}
+
+.dropdown-item.logout .dropdown-item-icon {
+  color: #ef4444;
+}
+
+
+.navbar-auth {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar-login {
+  padding: 0.5rem 1.5rem;
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition: var(--transition);
+}
+
+.navbar-scrolled .navbar-login {
+  color: var(--text-dark);
+}
+
+.navbar-login:hover {
+  color: var(--primary-light);
+}
+
+.navbar-scrolled .navbar-login:hover {
+  color: var(--primary-color);
+}
+
+.navbar-register {
+  padding: 0.5rem 1.5rem;
+  background: white;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition: var(--transition);
+}
+
+.navbar-register:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-1px);
+}
